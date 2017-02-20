@@ -1,6 +1,0 @@
-D:\dev\hello-world\task\obj\Debug\task-if-nro1.csprojResolveAssemblyReference.cache
-D:\dev\hello-world\task\bin\Debug\task.exe.config
-D:\dev\hello-world\task\bin\Debug\task.exe
-D:\dev\hello-world\task\bin\Debug\task.pdb
-D:\dev\hello-world\task\obj\Debug\task.exe
-D:\dev\hello-world\task\obj\Debug\task.pdb
