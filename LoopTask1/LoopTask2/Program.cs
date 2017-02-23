@@ -13,15 +13,11 @@ namespace LoopTask2
             {
                 try
                 {
-                    Console.WriteLine("Anna kokonaisluku väliltä 1 - 150, jonka summa lasketaan.");
+                    Console.WriteLine("Anna kokonaisluku, jonka summa lasketaan.");
                     Console.Write("Syötä 0 kun haluat lopettaa: ");
 
                     number = int.Parse(Console.ReadLine());
-                    if (number > 150)
-                    {
-                        Console.WriteLine("Luku on liian suuri kertoman laskemiseen tällä ohjelmalla.\n");
-                        continue;
-                    }
+
                     if (number < 0)
                     {
                         Console.WriteLine("Luku on negatiivinen.\n");

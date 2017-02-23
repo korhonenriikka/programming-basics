@@ -2,46 +2,32 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+
 namespace LoopTask4
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int number = -1;
-            while (number != 0)
-            {
-                try
-                {
-                    Console.WriteLine("Anna kokonaisluku väliltä 1 - 150, jonka summa lasketaan.");
-                    Console.Write("Syötä 0 kun haluat lopettaa: ");
+            Console.WriteLine("Anna kokonaisluku, jonka summa lasketaan.");
 
-                    number = int.Parse(Console.ReadLine());
-                    if (number > 150)
-                    {
-                        Console.WriteLine("Luku on liian suuri kertoman laskemiseen tällä ohjelmalla.\n");
-                        continue;
-                    }
-                   if (number < 0)
-                    {
-                        Console.WriteLine("Luku on negatiivinen.\n");
-                        continue;
-                    }
-                    double summa = 0              ;
-                    int i = 1;
-                    while (i <= number)
-                    {
-                        summa = summa + i;
-                        i++;
-                    }
-                    if (number != 0)
-                        Console.WriteLine("Luvun " + number + " summa on " + summa);
-                }
-                catch
-                {
-                    Console.WriteLine("Virheellinen syöte.");
-                }
+            int number;
+            string msg = string.Empty;
+            Console.WriteLine("Syötä numero: ");
+            while (!int.TryParse(Console.ReadLine(), out number))
+            {
+                Console.WriteLine("Virheellinen syöte!");
             }
+            int sum = 0;
+            int negative = number < 0 ? -1 : 1;
+            for (int i = 1; i <= number * negative; i++)
+            {
+                sum += i * negative;
+            }
+            msg = string.Format("{0}", sum);
+            Console.WriteLine("Vastaus: {0}", msg);
+            Console.ReadKey();
         }
     }
 }
