@@ -14,7 +14,7 @@ namespace twenty_random_numbers
 
             Random rnd = new Random();
             int i = 0;
-            while (i < 20)
+            while (i < 23)
             {
                 if (i % 5 == 0)
                 {
@@ -24,7 +24,7 @@ namespace twenty_random_numbers
                 {
                     Console.Write(", ");
                 }
-                Console.Write("{0}", rnd.Next(50));
+                Console.Write("{0}", rnd.Next(30));
                 i++;
             }
             Console.ReadKey();
